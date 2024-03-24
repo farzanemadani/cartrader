@@ -1,5 +1,4 @@
 
-import type { CarSearchBar } from '#build/components';
 <template>
    <!-- Home Hero -->
    <div class="relative h-screen w-100 bg-no-repeat bg-cover bg-bottom hero-bg">
@@ -10,7 +9,6 @@ import type { CarSearchBar } from '#build/components';
         <!-- HOME SEARCH BAR -->
         <CarSearchBar/>
         <!-- HOME SEARCH BAR -->
-        
       </div>
     </div>
     <div class="z-1 absolute w-full h-full bg-black opacity-50">
