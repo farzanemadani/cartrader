@@ -1,5 +1,5 @@
 <template>
-  <div v-if="car">
+  <div>
     <NuxtLayout name="custom">
         <CarDetailHero :car="car" />
         <CarDetailAttributes :features="car.features"/>
@@ -20,4 +20,11 @@ const car = computed(()=>{
     return item.id === parseInt(route.params.id)
   })
 })
+
+if(!car.value){
+  throw createError({
+    statusCode:404,
+    message:`Car with id of  ${ route.params.id } does not exit`
+  })
+}
 </script>
