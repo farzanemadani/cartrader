@@ -1,18 +1,23 @@
 <template>
-  <div>
+  <div v-if="car">
     <NuxtLayout name="custom">
-        <CarDetailHero />
-        <CarDetailAttributes />
-        <CarDetailDescription />
+        <CarDetailHero :car="car" />
+        <CarDetailAttributes :features="car.features"/>
+        <CarDetailDescription :description="car.description"/>
         <CarDetailContact />
     </NuxtLayout>
   </div>
 </template>
 <script setup>
 const route = useRoute();
+const { cars } = useCars();
 const { capitalizeFirstLetter } = useUtilities();
 useHead({
   title: capitalizeFirstLetter(route.params.name),
 });
-
+const car = computed(()=>{
+  return cars.find((item)=> {
+    return item.id === parseInt(route.params.id)
+  })
+})
 </script>
