@@ -3,3 +3,4 @@
         <CarCard/>
     </div>
 </template>
+<script></script>
