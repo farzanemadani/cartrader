@@ -4,10 +4,10 @@
          @click="navigateTo(`/car/${car.name}-${car.id}`)"
          class="shadow border w-full overflow-hidden mb-5 cursor-pointer h-[200px]">
             <div class="flex h-full">
-                  <img
+                  <NuxtImg
                   class="w-[250px] h-full"
                   :src="car.url" 
-                  :alt="car.name">
+                  :alt="car.name"/>
 
                   <div class="p-4 flex flex-col">
                     <div>
