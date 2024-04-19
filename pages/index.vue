@@ -1,8 +1,8 @@
 <template>
-    <CarHero/>
+  <CarHero />
 </template>
 <script setup lang="ts">
 useHead({
-    title:"CarTrader"
-})
+  title: "CarTrader",
+});
 </script>

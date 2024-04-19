@@ -1,26 +1,22 @@
-
 <template>
-   <!-- Home Hero -->
-   <div class="relative h-screen w-100 bg-no-repeat bg-cover bg-bottom hero-bg">
+  <!-- Home Hero -->
+  <div class="w-100 hero-bg relative h-screen bg-cover bg-bottom bg-no-repeat">
     <!-- Your content here -->
-    <div class="z-10 absolute w-full h-full flex justify-center items-center">
-      <div class="text-center w-1/2">
-        <h1 class="text-8xl font-serif mb-10 text-white">Find your drive</h1>
+    <div class="absolute z-10 flex h-full w-full items-center justify-center">
+      <div class="w-1/2 text-center">
+        <h1 class="mb-10 font-serif text-8xl text-white">Find your drive</h1>
         <!-- HOME SEARCH BAR -->
-        <CarSearchBar/>
+        <CarSearchBar />
         <!-- HOME SEARCH BAR -->
       </div>
     </div>
-    <div class="z-1 absolute w-full h-full bg-black opacity-50">
-    </div>
+    <div class="z-1 absolute h-full w-full bg-black opacity-50"></div>
   </div>
-   <!-- Home Hero -->
+  <!-- Home Hero -->
 </template>
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 <style scoped>
-.hero-bg{
+.hero-bg {
   background-image: url(../../public/assets/img/hero-bg.jpeg);
 }
 </style>

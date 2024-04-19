@@ -1,23 +1,21 @@
 <template>
-    <div class="mt-10">
-        <NuxtImg :src="car.url" class="w-full" :alt="car.name"/>
-        <h1 class="mt-10 text-4xl">{{ car.name }}</h1>
-        <div class="text-slate-500 flex text-lg mt-3 border-b pb-5 justify-between">
-        <div class="flex">
-            <p class="mr-2"> {{ car.seats }} seats </p>
-            <p class="mr-2">|</p>
-            <p class="mr-2">{{ car.miles }} miles</p>
-        </div>
-        <div>
-            <p class="font-bold text-2xl">
-            ${{ car.price }}
-            </p>
-        </div>
-        </div>
+  <div class="mt-10">
+    <NuxtImg :src="car.url" class="w-full" :alt="car.name" />
+    <h1 class="mt-10 text-4xl">{{ car.name }}</h1>
+    <div class="mt-3 flex justify-between border-b pb-5 text-lg text-slate-500">
+      <div class="flex">
+        <p class="mr-2">{{ car.seats }} seats</p>
+        <p class="mr-2">|</p>
+        <p class="mr-2">{{ car.miles }} miles</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold">${{ car.price }}</p>
+      </div>
     </div>
+  </div>
 </template>
 <script setup>
 const props = defineProps({
-    car:Object
-})
+  car: Object,
+});
 </script>

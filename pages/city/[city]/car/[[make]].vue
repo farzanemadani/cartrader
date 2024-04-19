@@ -1,8 +1,6 @@
 <template>
   <div>
-    <CarCards/>
+    <CarCards />
   </div>
 </template>
-<script>
-
-</script>
+<script></script>
