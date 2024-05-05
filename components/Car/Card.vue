@@ -36,4 +36,5 @@ const props = defineProps({
 const favored = useState(`favored-${props.car.id}`, () => {
   return false;
 });
+
 </script>
