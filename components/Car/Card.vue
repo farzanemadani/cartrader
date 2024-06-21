@@ -6,7 +6,7 @@
       <img
         class="absolute right-4 top-4 z-20 w-7"
         :src="favored ? heartFilled : heartOutline"
-        @click="favored = !favored"
+        @click="emit('favor', car.id)"
       />
       <div
         @click="navigateTo(`/car/${car.name}-${car.id}`)"
@@ -26,15 +26,13 @@
   </div>
 </template>
 <script setup>
-import heartFilled from "@/public/assets/img/heartFilled.png";
-import heartOutline from "@/public/assets/img/heartOutline.png";
+  import heartFilled from "@/public/assets/img/heartFilled.png";
+  import heartOutline from "@/public/assets/img/heartOutline.png";
 
-const props = defineProps({
-  car: Object,
-});
+  const props = defineProps({
+    car: Object,
+    favored: Boolean,
+  });
 
-const favored = useState(`favored-${props.car.id}`, () => {
-  return false;
-});
-
+  const emit = defineEmits("favor");
 </script>
